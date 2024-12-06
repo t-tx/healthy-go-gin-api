@@ -62,10 +62,6 @@ By following these steps, you can verify that the Healthy application is working
    `-- test
    ```
 
-## Assignment answer
-**Please summarize the db table required for the system, the response json data of the required api, and their connections in a diagram.**
+## Documentation
 - db table required: [database.go](internal/database/database.go)
 - response json data of the required api, and their connections in a diagram: [postman.json](documents/postman.json) and [API.md](documents/API.md)
-
-**Please develop the backend of the system.**
-- DONE by code# healthy-go-gin-api
