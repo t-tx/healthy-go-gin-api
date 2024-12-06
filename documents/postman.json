@@ -1,0 +1,327 @@
+{
+	"info": {
+		"_postman_id": "87e41ecd-699c-468b-9bdc-1d82c2b9b532",
+		"name": "Healthy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14213995"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "diaryAdd",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"title\":\"my diary\",\r\n        \"content\":\"some diary content\"\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/user/diaries",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"diaries"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "diaryGet",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"my diary\",\r\n    \"content\":\"some diary content\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/user/diaries",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"diaries"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eventsAdd",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"event_type\":\"exercise\",\r\n        \"content\": {\r\n            \"type\": \"running\",\r\n            \"duration\": 10\r\n        }\r\n    },\r\n    {\r\n        \"event_type\":\"exercise\",\r\n        \"content\": {\r\n            \"type\": \"walking\",\r\n            \"duration\": 10\r\n        }\r\n    },\r\n    {\r\n        \"event_type\":\"meal\",\r\n        \"content\": {\r\n            \"type\": \"dinner\",\r\n            \"dish\": [\r\n                {\"food\": \"egg\", \"quantity\": 2},\r\n                {\"food\": \"sashimi\", \"quantity\": 2}\r\n            ]\r\n        }\r\n    },\r\n    {\r\n        \"event_type\":\"exercise\",\r\n        \"content\": {\r\n            \"type\": \"walking\",\r\n            \"duration\": 10\r\n        }\r\n    },\r\n    {\r\n        \"event_type\":\"measure\",\r\n        \"content\": {\r\n            \"type\": \"weight\",\r\n            \"value\": 100\r\n        }\r\n    },\r\n    {\r\n        \"event_type\":\"measure\",\r\n        \"content\": {\r\n            \"type\": \"height\",\r\n            \"value\": 100\r\n        }\r\n    }\r\n]\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/user/events",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"events"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eventsGet",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/user/events",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"events"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "graphGet",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/user/graph",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"graph"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "achievementGet",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/user/achievement",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"achievement"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "You need to log in to obtain a token in cookie before calling the protected API."
+		},
+		{
+			"name": "public",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"trung\",\r\n    \"password\":\"AA1234aa\",\r\n    \"gender\": \"male\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/signup",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"trung\",\r\n    \"password\":\"AA1234aa\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/signin",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "articleGet",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/articles/health",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"articles",
+								"health"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "configGet",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/config/global",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"config",
+								"global"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

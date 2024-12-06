@@ -1,0 +1,14 @@
+{
+	"name": "[GO] healthy",
+	"image": "golang:1.20",
+	"workspaceMount": "source=${localWorkspaceFolder},target=/app,type=bind",
+	"workspaceFolder": "/app",
+	"runArgs": ["--gpus=all"],
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"golang.go"
+			]
+		}
+	}
+}

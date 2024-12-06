@@ -1,0 +1,12 @@
+app:
+  name: 'HEALTHY API'
+  jwt_secret_key: 'somekey'
+
+http:
+  port: '8080'
+
+logger:
+  log_level: 'debug'
+
+database:
+  path: 'db.sqlite3'
